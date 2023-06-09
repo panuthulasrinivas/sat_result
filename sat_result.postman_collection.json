@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "f6fabdd7-46fc-48fc-bba7-d505a2b03ece",
+		"name": "sat_result",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"srinu3\",\r\n    \"address\":\"mullur\",\r\n    \"city\":\"Bangalore\",\r\n    \"country\":\"INDIA\",\r\n    \"pincode\":560035,\r\n    \"satScore\":150\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v0/result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v0",
+						"result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getall",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v0/result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v0",
+						"result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Rank",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v0/result/rank?name=srinu2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v0",
+						"result",
+						"rank"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "srinu2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v0/result?name=srinu1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v0",
+						"result"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "srinu1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v0/result?name=srinu&satScore=200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v0",
+						"result"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "srinu"
+						},
+						{
+							"key": "satScore",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
